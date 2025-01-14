@@ -63,10 +63,10 @@
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp ESCAPE  &kp F1  &kp F2   &kp F3   &kp F4   &trans                      &kp PAGE_UP             &trans   &kp N7        &kp N8        &kp N9        &trans  &kp DELETE
-&trans      &kp F5  &kp F6   &kp F7   &kp F8   &trans            &kp HOME  &trans         &kp END  &trans   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
-&trans      &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans              &kp PAGE_DOWN           &trans   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-                             &trans   &trans   &trans                                              &kp INS  &trans        &kp N0
+&kp ESCAPE  &kp F1  &kp F2   &kp F3   &kp F4   &trans                      &kp PAGE_UP             &kp N7        &kp N8        &kp N9        &none  &none  &none
+&trans      &kp F5  &kp F6   &kp F7   &kp F8   &trans            &kp HOME  &trans         &kp END  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &none  &none  &none
+&trans      &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans              &kp PAGE_DOWN           &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_2  &none  &none  &none
+                             &trans   &trans   &trans                                              &kp KP_ENTER  &kp N0        &kp N0
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -75,10 +75,10 @@
         raise_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans           &kp EXCL        &kp AT        &kp HASH      &kp DLLR      &kp PRCNT                                &trans          &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&bt BT_CLR_ALL   &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                     &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&rgb_ug RGB_OFF  &rgb_ug RGB_ON  &trans        &none         &none         &trans        &rgb_ug RGB_TOG            &trans          &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                               &trans        &trans        &kp SPACE                                                &kp RET    &trans     &trans
+&trans          &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT                                         &rgb_ug RGB_HUI                   &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                     &rgb_ug RGB_EFR  &trans           &rgb_ug RGB_EFF  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&none           &none         &none         &none         &none         &none         &rgb_ug RGB_TOG                     &rgb_ug RGB_HUD                   &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                                            &trans        &trans        &kp SPACE                                                                           &kp RET    &trans     &trans
             >;
 
             sensor-bindings = <&rgb_encoder>;
